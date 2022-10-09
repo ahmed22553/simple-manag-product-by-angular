@@ -1,0 +1,68 @@
+
+  
+  <!-- ================> crud products <======================================= -->
+   <!-- ================> product management system crud by angular<======================================= -->
+<div class="container">
+ 
+  <label for="name">name</label>
+  <input type="text" id="name"[(ngModel)]="Pname">
+  
+  <label for="name">category</label>
+  <input type="text" id="category"[(ngModel)]="Pcategory">
+  
+  <label for="name">dis</label>
+  <input type="text" id="dis"[(ngModel)]="Pdis">
+  
+  <label for="name">serial</label>
+  <input type="number" id="serial"[(ngModel)]="Pserial">
+  <button class="btn btn-primary" (click)="Add()">Add Product</button>
+
+
+  <table class="table">
+    <thead>
+      <tr>
+      
+        <th scope="col"> name</th>
+        <th scope="col"> category</th>
+        <th scope="col">dis</th>
+        <th scope="col">serial</th>
+      </tr>
+    </thead>
+    <tbody>
+  
+      <tr *ngFor="let i of Product1; let k=index">
+        <th scope="row">{{k+1}}</th>
+
+        <th scope="row">{{i.name}}</th>
+        <th scope="row">{{i.category}}</th>
+        <td scop="row">{{i.dis}}</td>
+        <th scope="row">{{i.serial}}</th>
+        <th scope="row">
+          <button class="btn btn-danger" (click)="remove(k)">REMOVE</button>
+        </th>
+        <!-- <td colspan="2">{{i.serial}}</td> -->
+       
+      </tr>
+    </tbody>
+  </table>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
